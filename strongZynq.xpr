@@ -34,12 +34,8 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="hdl/sys.hwdef"/>
-        <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="hw_handoff/sys_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="sys_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="ip/sys_auto_pc_0/sys_auto_pc_0.xci"/>
         <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="ip/sys_axi_gpio_0_0/sys_axi_gpio_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="hw_handoff/sys.hwh"/>
         <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="ip/sys_axi_quad_spi_0_0/sys_axi_quad_spi_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="ip/sys_axi_iic_2_0/sys_axi_iic_2_0.xci"/>
         <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="ip/sys_xbar_0/sys_xbar_0.xci"/>
@@ -51,6 +47,12 @@
         <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="ip/sys_axi_iic_0_0/sys_axi_iic_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="ip/sys_proc_sys_reset_0_0/sys_proc_sys_reset_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="ip/sys_processing_system7_0_0/sys_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="ip/sys_AXI_PWM_0_0/sys_AXI_PWM_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="sys_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="ip/sys_AXI_PWM_1_0/sys_AXI_PWM_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="hdl/sys.hwdef"/>
+        <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="hw_handoff/sys_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="sys.bd" FileRelPathName="hw_handoff/sys.hwh"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/sys/hdl/sys_wrapper.v">
         <FileInfo>

@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-//Date        : Sun Dec 30 16:11:22 2018
+//Date        : Mon Jan 07 21:47:37 2019
 //Host        : SRPC00501 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target sys_wrapper.bd
 //Design      : sys_wrapper
@@ -47,7 +47,9 @@ module sys_wrapper
     axi_spi1_sck_io,
     axi_spi1_ss_io,
     iic0_scl_io,
-    iic0_sda_io);
+    iic0_sda_io,
+    pwm0_out,
+    pwm1_out);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -86,6 +88,8 @@ module sys_wrapper
   inout [0:0]axi_spi1_ss_io;
   inout iic0_scl_io;
   inout iic0_sda_io;
+  output pwm0_out;
+  output pwm1_out;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -173,6 +177,8 @@ module sys_wrapper
   wire iic0_sda_io;
   wire iic0_sda_o;
   wire iic0_sda_t;
+  wire pwm0_out;
+  wire pwm1_out;
 
   IOBUF axi_iic0_scl_iobuf
        (.I(axi_iic0_scl_o),
@@ -324,5 +330,7 @@ module sys_wrapper
         .IIC0_scl_t(iic0_scl_t),
         .IIC0_sda_i(iic0_sda_i),
         .IIC0_sda_o(iic0_sda_o),
-        .IIC0_sda_t(iic0_sda_t));
+        .IIC0_sda_t(iic0_sda_t),
+        .pwm0_out(pwm0_out),
+        .pwm1_out(pwm1_out));
 endmodule

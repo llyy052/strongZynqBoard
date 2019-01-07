@@ -44,7 +44,8 @@ module top7z020(
     inout wire FIXED_IO_ps_srstb,
     
     //output wire [1:0]axi_gpio0
-
+  
+    output wire [1:0]pwm_o,
     inout wire iic0_scl_io,
     inout wire iic0_sda_io
 /*
@@ -90,6 +91,8 @@ sys_wrapper soc(
 	.FIXED_IO_ps_porb(FIXED_IO_ps_porb),
 	.FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
 	
+	 .pwm0_out(pwm_o[0]),
+     .pwm1_out(pwm_o[1]),
 	//.axi_gpio0_tri_o(axi_gpio0)
 	//.axi_gpio0_tri_o({iic0_sda_io,iic0_scl_io})
 	
