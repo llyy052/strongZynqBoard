@@ -22,3 +22,5 @@ strongZynq.sdk/.metadata/*
 strongZynq.sdk/*
 #strongZynq.sdk/
 #strongZynq.sdk/
+
+strongZynq.tmp/*
