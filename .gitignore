@@ -1,0 +1,24 @@
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+strongZynq.cache/*
+strongZynq.hw/*
+strongZynq.sim/*
+
+strongZynq.runs/*
+strongZynq.ip_user_files/*
+
+
+strongZynq.sdk/.metadata/*
+
+#*/Debug/*
+#*/Debug/*
+strongZynq.sdk/*
+#strongZynq.sdk/
+#strongZynq.sdk/
