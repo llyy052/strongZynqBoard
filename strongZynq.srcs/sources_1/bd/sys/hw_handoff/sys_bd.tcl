@@ -309,37 +309,37 @@ preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -y 480 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -y 790 -defaultsOSRD
 preplace inst cpu_0 -pg 1 -lvl 3 -y 90 -defaultsOSRD
 preplace inst axi_quad_spi_0 -pg 1 -lvl 3 -y 710 -defaultsOSRD
-preplace netloc axi_quad_spi_0_SPI_0 1 3 1 NJ
-preplace netloc axi_iic_2_IIC 1 3 1 NJ
-preplace netloc processing_system7_0_DDR 1 3 1 NJ
+preplace netloc axi_quad_spi_0_SPI_0 1 3 2 NJ 700 N
+preplace netloc axi_iic_2_IIC 1 3 2 NJ 560 N
+preplace netloc processing_system7_0_DDR 1 3 2 NJ 40 N
 preplace netloc processing_system7_0_axi_periph_M03_AXI 1 2 1 760
-preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 690
-preplace netloc axi_iic_0_iic2intc_irpt 1 1 3 390 210 NJ 210 1110
-preplace netloc axi_iic_1_IIC 1 3 1 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 3 400 510 NJ 510 1120
-preplace netloc ps7_0_axi_periph_M07_AXI 1 2 1 680
-preplace netloc axi_quad_spi_1_ip2intc_irpt 1 1 3 390 530 NJ 790 1100
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 4 20 200 NJ 200 NJ 200 1100
-preplace netloc processing_system7_0_IIC_0 1 3 1 NJ
-preplace netloc axi_quad_spi_1_SPI_0 1 3 1 NJ
-preplace netloc processing_system7_0_axi_periph_M02_AXI 1 2 1 740
-preplace netloc AXI_PWM_0_pulse_out 1 3 1 NJ
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 700
+preplace netloc axi_iic_0_iic2intc_irpt 1 1 3 410 220 NJ 220 1100
+preplace netloc axi_iic_1_IIC 1 3 2 NJ 410 N
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 3 370 200 NJ 200 1120
+preplace netloc ps7_0_axi_periph_M07_AXI 1 2 1 690
+preplace netloc axi_quad_spi_1_ip2intc_irpt 1 1 3 390 1050 NJ 790 1100
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 4 20 190 NJ 190 NJ 190 1100
+preplace netloc processing_system7_0_IIC_0 1 3 2 NJ 80 N
+preplace netloc axi_quad_spi_1_SPI_0 1 3 2 NJ 860 N
+preplace netloc processing_system7_0_axi_periph_M02_AXI 1 2 1 750
+preplace netloc AXI_PWM_0_pulse_out 1 3 2 NJ 1000 N
 preplace netloc proc_sys_reset_0_interconnect_aresetn 1 1 1 350
-preplace netloc xlconcat_0_dout 1 2 1 680
-preplace netloc ps7_0_axi_periph_M06_AXI 1 2 1 690
-preplace netloc processing_system7_0_FIXED_IO 1 3 1 NJ
-preplace netloc axi_iic_2_iic2intc_irpt 1 1 3 370 400 NJ 360 1110
-preplace netloc axi_iic_1_iic2intc_irpt 1 1 3 400 220 NJ 220 1100
-preplace netloc axi_gpio_0_GPIO 1 3 1 NJ
-preplace netloc axi_iic_0_IIC 1 3 1 NJ
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 2 N 520 730
-preplace netloc ps7_0_axi_periph_M05_AXI 1 2 1 700
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 30 390 360 430 710 190 1110
-preplace netloc AXI_PWM_1_pulse_out 1 3 1 NJ
-preplace netloc axi_quad_spi_0_ip2intc_irpt 1 1 3 380 500 NJ 500 1100
-preplace netloc processing_system7_0_axi_periph_M04_AXI 1 2 1 720
-preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 720
-levelinfo -pg 1 0 190 540 930 1140 -top 0 -bot 1310
+preplace netloc xlconcat_0_dout 1 2 1 690
+preplace netloc ps7_0_axi_periph_M06_AXI 1 2 1 700
+preplace netloc processing_system7_0_FIXED_IO 1 3 2 NJ 60 N
+preplace netloc axi_iic_2_iic2intc_irpt 1 1 3 380 500 NJ 500 1110
+preplace netloc axi_iic_1_iic2intc_irpt 1 1 3 400 400 NJ 360 1100
+preplace netloc axi_gpio_0_GPIO 1 3 2 NJ 1120 N
+preplace netloc axi_iic_0_IIC 1 3 2 NJ 270 N
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 2 360 510 740
+preplace netloc ps7_0_axi_periph_M05_AXI 1 2 1 710
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 30 570 360 530 720 210 1110
+preplace netloc AXI_PWM_1_pulse_out 1 3 2 NJ 1240 N
+preplace netloc axi_quad_spi_0_ip2intc_irpt 1 1 3 410 490 NJ 510 1100
+preplace netloc processing_system7_0_axi_periph_M04_AXI 1 2 1 730
+preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 730
+levelinfo -pg 1 0 190 550 930 1230 1360 -top 0 -bot 1310
 ",
 }
 

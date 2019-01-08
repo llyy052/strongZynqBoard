@@ -48,7 +48,7 @@
 
 
 // IP VLNV: srkj.com:user:AXI_PWM:1.0
-// IP Revision: 2
+// IP Revision: 5
 
 (* X_CORE_INFO = "AXI_PWM_v1_0,Vivado 2015.4" *)
 (* CHECK_LICENSE_TYPE = "sys_AXI_PWM_1_0,AXI_PWM_v1_0,{}" *)

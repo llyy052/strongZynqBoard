@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: srkj.com:user:AXI_PWM:1.0
--- IP Revision: 2
+-- IP Revision: 5
 
 -- The following code must appear in the VHDL architecture header.
 

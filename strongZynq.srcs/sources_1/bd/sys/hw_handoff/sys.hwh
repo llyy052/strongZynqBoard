@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jan 07 21:47:40 2019" VIVADOVERSION="2015.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jan 07 23:26:45 2019" VIVADOVERSION="2015.4">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="sys" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -5247,10 +5247,10 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M04_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M05_ACLK"/>
-            <CONNECTION INSTANCE="AXI_PWM_1" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="AXI_PWM_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M06_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M07_ACLK"/>
+            <CONNECTION INSTANCE="AXI_PWM_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="AXI_PWM_1" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="cpu_0_FCLK_RESET0_N">

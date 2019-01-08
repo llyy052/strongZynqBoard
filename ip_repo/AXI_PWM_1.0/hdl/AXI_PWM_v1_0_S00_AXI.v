@@ -434,7 +434,16 @@
 	end    
 
 	// Add user logic here
-
+    pwm_gen(
+        .clk(S_AXI_ACLK),
+        .rst_n(S_AXI_ARESETN),
+        
+        .reg_control(slv_reg0),
+        .reg_prescale(slv_reg1),
+        .reg_resolution(slv_reg2),
+        .reg_duty(slv_reg3),
+        .pulse_out(pulse_out)
+    );
 	// User logic ends
 
 	endmodule
