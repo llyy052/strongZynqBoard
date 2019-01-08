@@ -6,6 +6,7 @@
 *.ko
 *.obj
 *.elf
+*.a
 
 strongZynq.cache/*
 strongZynq.hw/*
