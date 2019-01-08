@@ -19,8 +19,10 @@ strongZynq.sdk/.metadata/*
 
 #*/Debug/*
 #*/Debug/*
-strongZynq.sdk/*
-#strongZynq.sdk/
-#strongZynq.sdk/
+#strongZynq.sdk/*
+strongZynq.sdk/RemoteSystemsTempFiles/*
+strongZynq.sdk/test/*
+strongZynq.sdk/webtalk/*
+strongZynq.sdk/SDK.log
 
 strongZynq.tmp/*
