@@ -44,18 +44,22 @@ set_property PACKAGE_PIN T17 [get_ports {iic0_sda_io}]
 #
 #set_property IOSTANDARD LVCMOS33 [get_ports {axi_iic2_sda_io}]
 #set_property PACKAGE_PIN T17 [get_ports {axi_iic2_sda_io}]
+#######spi
+set_property IOSTANDARD LVCMOS33 [get_ports {axi_spi0_ss_io}]
+set_property PACKAGE_PIN G20 [get_ports {axi_spi0_ss_io}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {axi_spi0_sck_io}]
+set_property PACKAGE_PIN E18 [get_ports {axi_spi0_sck_io}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {axi_spi0_sdi_io}]
+set_property PACKAGE_PIN E19 [get_ports {axi_spi0_sdi_io}]
 #
-#set_property IOSTANDARD LVCMOS33 [get_ports {axi_spi0_io0_io}]
-#set_property PACKAGE_PIN T17 [get_ports {axi_spi0_io0_io}]
+set_property IOSTANDARD LVCMOS33 [get_ports {axi_spi0_sdo_io}]
+set_property PACKAGE_PIN F20 [get_ports {axi_spi0_sdo_io}]
 #
-#set_property IOSTANDARD LVCMOS33 [get_ports {axi_spi0_io1_io}]
-#set_property PACKAGE_PIN T17 [get_ports {axi_spi0_io1_io}]
+
 #
-#set_property IOSTANDARD LVCMOS33 [get_ports {axi_spi0_sck_io}]
-#set_property PACKAGE_PIN T17 [get_ports {axi_spi0_sck_io}]
-#
-#set_property IOSTANDARD LVCMOS33 [get_ports {axi_spi0_ss_io}]
-#set_property PACKAGE_PIN T17 [get_ports {axi_spi0_ss_io}]
+
 #
 #set_property IOSTANDARD LVCMOS33 [get_ports {axi_spi1_io0_io}]
 #set_property PACKAGE_PIN T17 [get_ports {axi_spi1_io0_io}]
