@@ -61,6 +61,20 @@ sys_processing_system7_0_0 your_instance_name (
   .I2C0_SCL_I(I2C0_SCL_I),                // input wire I2C0_SCL_I
   .I2C0_SCL_O(I2C0_SCL_O),                // output wire I2C0_SCL_O
   .I2C0_SCL_T(I2C0_SCL_T),                // output wire I2C0_SCL_T
+  .SPI1_SCLK_I(SPI1_SCLK_I),              // input wire SPI1_SCLK_I
+  .SPI1_SCLK_O(SPI1_SCLK_O),              // output wire SPI1_SCLK_O
+  .SPI1_SCLK_T(SPI1_SCLK_T),              // output wire SPI1_SCLK_T
+  .SPI1_MOSI_I(SPI1_MOSI_I),              // input wire SPI1_MOSI_I
+  .SPI1_MOSI_O(SPI1_MOSI_O),              // output wire SPI1_MOSI_O
+  .SPI1_MOSI_T(SPI1_MOSI_T),              // output wire SPI1_MOSI_T
+  .SPI1_MISO_I(SPI1_MISO_I),              // input wire SPI1_MISO_I
+  .SPI1_MISO_O(SPI1_MISO_O),              // output wire SPI1_MISO_O
+  .SPI1_MISO_T(SPI1_MISO_T),              // output wire SPI1_MISO_T
+  .SPI1_SS_I(SPI1_SS_I),                  // input wire SPI1_SS_I
+  .SPI1_SS_O(SPI1_SS_O),                  // output wire SPI1_SS_O
+  .SPI1_SS1_O(SPI1_SS1_O),                // output wire SPI1_SS1_O
+  .SPI1_SS2_O(SPI1_SS2_O),                // output wire SPI1_SS2_O
+  .SPI1_SS_T(SPI1_SS_T),                  // output wire SPI1_SS_T
   .M_AXI_GP0_ARVALID(M_AXI_GP0_ARVALID),  // output wire M_AXI_GP0_ARVALID
   .M_AXI_GP0_AWVALID(M_AXI_GP0_AWVALID),  // output wire M_AXI_GP0_AWVALID
   .M_AXI_GP0_BREADY(M_AXI_GP0_BREADY),    // output wire M_AXI_GP0_BREADY

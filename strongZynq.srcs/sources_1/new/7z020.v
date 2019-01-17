@@ -49,11 +49,17 @@ module top7z020(
     inout wire iic0_scl_io,
     inout wire iic0_sda_io,
     
+    inout spi1_ss_io,
+    inout spi1_sck_io,
+    inout spi1_io0_io,
+    inout spi1_io1_io
+
+/*
 	inout wire axi_spi0_sdi_io,
     inout wire axi_spi0_sdo_io,
     inout wire axi_spi0_sck_io,
     inout wire axi_spi0_ss_io
-    /*
+
     inout wire axi_iic0_scl_io,
     inout wire axi_iic0_sda_io,
     inout wire axi_iic1_scl_io,
@@ -101,11 +107,16 @@ sys_wrapper soc(
 	.iic0_scl_io(iic0_scl_io),
 	.iic0_sda_io(iic0_sda_io),
 	
+	.spi1_io0_io(spi1_io0_io),
+    .spi1_io1_io(spi1_io1_io),
+    .spi1_sck_io(spi1_sck_io),
+    .spi1_ss_io(spi1_ss_io)
+ /*    
 	.axi_spi0_io0_io(axi_spi0_sdi_io),
     .axi_spi0_io1_io(axi_spi0_sdo_io),
     .axi_spi0_sck_io(axi_spi0_sck_io),
     .axi_spi0_ss_io(axi_spi0_ss_io)
- /*	
+	
 	.axi_iic0_scl_io(axi_iic0_scl_io),
 	.axi_iic0_sda_io(axi_iic0_sda_io),
 	.axi_iic1_scl_io(axi_iic1_scl_io),

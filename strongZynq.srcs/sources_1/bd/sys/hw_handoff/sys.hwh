@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jan 07 23:26:45 2019" VIVADOVERSION="2015.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jan 17 10:43:29 2019" VIVADOVERSION="2015.4">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="sys" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -84,6 +84,20 @@
         <CONNECTION INSTANCE="AXI_PWM_1" PORT="pulse_out"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="I" NAME="SPI1_sck_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="SPI1_sck_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="SPI1_sck_t" SIGIS="undef"/>
+    <PORT DIR="I" NAME="SPI1_io0_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="SPI1_io0_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="SPI1_io0_t" SIGIS="undef"/>
+    <PORT DIR="I" NAME="SPI1_io1_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="SPI1_io1_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="SPI1_io1_t" SIGIS="undef"/>
+    <PORT DIR="I" NAME="SPI1_ss_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="SPI1_ss_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="SPI1_ss1_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="SPI1_ss2_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="SPI1_ss_t" SIGIS="undef"/>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -204,6 +218,24 @@
     <BUSINTERFACE BUSNAME="axi_gpio_0_GPIO" NAME="AXI_GPIO0" TYPE="INITIATOR">
       <PORTMAPS>
         <PORTMAP PHYSICAL="AXI_GPIO0_tri_o"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="cpu_0_SPI_1" NAME="SPI1" TYPE="INITIATOR">
+      <PORTMAPS>
+        <PORTMAP PHYSICAL="SPI1_sck_i"/>
+        <PORTMAP PHYSICAL="SPI1_sck_o"/>
+        <PORTMAP PHYSICAL="SPI1_sck_t"/>
+        <PORTMAP PHYSICAL="SPI1_io0_i"/>
+        <PORTMAP PHYSICAL="SPI1_io0_o"/>
+        <PORTMAP PHYSICAL="SPI1_io0_t"/>
+        <PORTMAP PHYSICAL="SPI1_io1_i"/>
+        <PORTMAP PHYSICAL="SPI1_io1_o"/>
+        <PORTMAP PHYSICAL="SPI1_io1_t"/>
+        <PORTMAP PHYSICAL="SPI1_ss_i"/>
+        <PORTMAP PHYSICAL="SPI1_ss_o"/>
+        <PORTMAP PHYSICAL="SPI1_ss1_o"/>
+        <PORTMAP PHYSICAL="SPI1_ss2_o"/>
+        <PORTMAP PHYSICAL="SPI1_ss_t"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -4293,7 +4325,7 @@
         <PARAMETER NAME="PCW_ACT_USB1_PERIPHERAL_FREQMHZ" VALUE="60"/>
         <PARAMETER NAME="PCW_ACT_SDIO_PERIPHERAL_FREQMHZ" VALUE="100.000000"/>
         <PARAMETER NAME="PCW_ACT_UART_PERIPHERAL_FREQMHZ" VALUE="100.000000"/>
-        <PARAMETER NAME="PCW_ACT_SPI_PERIPHERAL_FREQMHZ" VALUE="10.000000"/>
+        <PARAMETER NAME="PCW_ACT_SPI_PERIPHERAL_FREQMHZ" VALUE="166.666672"/>
         <PARAMETER NAME="PCW_ACT_CAN_PERIPHERAL_FREQMHZ" VALUE="10.000000"/>
         <PARAMETER NAME="PCW_ACT_CAN0_PERIPHERAL_FREQMHZ" VALUE="23.8095"/>
         <PARAMETER NAME="PCW_ACT_CAN1_PERIPHERAL_FREQMHZ" VALUE="23.8095"/>
@@ -4323,7 +4355,7 @@
         <PARAMETER NAME="PCW_QSPI_PERIPHERAL_DIVISOR0" VALUE="5"/>
         <PARAMETER NAME="PCW_SDIO_PERIPHERAL_DIVISOR0" VALUE="10"/>
         <PARAMETER NAME="PCW_UART_PERIPHERAL_DIVISOR0" VALUE="10"/>
-        <PARAMETER NAME="PCW_SPI_PERIPHERAL_DIVISOR0" VALUE="1"/>
+        <PARAMETER NAME="PCW_SPI_PERIPHERAL_DIVISOR0" VALUE="6"/>
         <PARAMETER NAME="PCW_CAN_PERIPHERAL_DIVISOR0" VALUE="1"/>
         <PARAMETER NAME="PCW_CAN_PERIPHERAL_DIVISOR1" VALUE="1"/>
         <PARAMETER NAME="PCW_FCLK0_PERIPHERAL_DIVISOR0" VALUE="10"/>
@@ -4357,7 +4389,7 @@
         <PARAMETER NAME="PCW_DDR_DDR_PLL_FREQMHZ" VALUE="1066.667"/>
         <PARAMETER NAME="PCW_SMC_PERIPHERAL_VALID" VALUE="0"/>
         <PARAMETER NAME="PCW_SDIO_PERIPHERAL_VALID" VALUE="1"/>
-        <PARAMETER NAME="PCW_SPI_PERIPHERAL_VALID" VALUE="0"/>
+        <PARAMETER NAME="PCW_SPI_PERIPHERAL_VALID" VALUE="1"/>
         <PARAMETER NAME="PCW_CAN_PERIPHERAL_VALID" VALUE="0"/>
         <PARAMETER NAME="PCW_UART_PERIPHERAL_VALID" VALUE="1"/>
         <PARAMETER NAME="PCW_EN_EMIO_CAN0" VALUE="0"/>
@@ -4377,7 +4409,7 @@
         <PARAMETER NAME="PCW_EN_EMIO_CD_SDIO1" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_EMIO_WP_SDIO1" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_EMIO_SPI0" VALUE="0"/>
-        <PARAMETER NAME="PCW_EN_EMIO_SPI1" VALUE="0"/>
+        <PARAMETER NAME="PCW_EN_EMIO_SPI1" VALUE="1"/>
         <PARAMETER NAME="PCW_EN_EMIO_UART0" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_EMIO_UART1" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_EMIO_MODEM_UART0" VALUE="0"/>
@@ -4478,7 +4510,7 @@
         <PARAMETER NAME="PCW_EN_SDIO0" VALUE="1"/>
         <PARAMETER NAME="PCW_EN_SDIO1" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_SPI0" VALUE="0"/>
-        <PARAMETER NAME="PCW_EN_SPI1" VALUE="0"/>
+        <PARAMETER NAME="PCW_EN_SPI1" VALUE="1"/>
         <PARAMETER NAME="PCW_EN_UART0" VALUE="1"/>
         <PARAMETER NAME="PCW_EN_UART1" VALUE="0"/>
         <PARAMETER NAME="PCW_EN_MODEM_UART0" VALUE="0"/>
@@ -4650,14 +4682,14 @@
         <PARAMETER NAME="PCW_SPI0_GRP_SS1_IO" VALUE="&lt;Select>"/>
         <PARAMETER NAME="PCW_SPI0_GRP_SS2_ENABLE" VALUE="0"/>
         <PARAMETER NAME="PCW_SPI0_GRP_SS2_IO" VALUE="&lt;Select>"/>
-        <PARAMETER NAME="PCW_SPI1_PERIPHERAL_ENABLE" VALUE="0"/>
-        <PARAMETER NAME="PCW_SPI1_SPI1_IO" VALUE="&lt;Select>"/>
-        <PARAMETER NAME="PCW_SPI1_GRP_SS0_ENABLE" VALUE="0"/>
-        <PARAMETER NAME="PCW_SPI1_GRP_SS0_IO" VALUE="&lt;Select>"/>
-        <PARAMETER NAME="PCW_SPI1_GRP_SS1_ENABLE" VALUE="0"/>
-        <PARAMETER NAME="PCW_SPI1_GRP_SS1_IO" VALUE="&lt;Select>"/>
-        <PARAMETER NAME="PCW_SPI1_GRP_SS2_ENABLE" VALUE="0"/>
-        <PARAMETER NAME="PCW_SPI1_GRP_SS2_IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PCW_SPI1_PERIPHERAL_ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PCW_SPI1_SPI1_IO" VALUE="EMIO"/>
+        <PARAMETER NAME="PCW_SPI1_GRP_SS0_ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PCW_SPI1_GRP_SS0_IO" VALUE="EMIO"/>
+        <PARAMETER NAME="PCW_SPI1_GRP_SS1_ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PCW_SPI1_GRP_SS1_IO" VALUE="EMIO"/>
+        <PARAMETER NAME="PCW_SPI1_GRP_SS2_ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PCW_SPI1_GRP_SS2_IO" VALUE="EMIO"/>
         <PARAMETER NAME="PCW_CAN0_PERIPHERAL_ENABLE" VALUE="0"/>
         <PARAMETER NAME="PCW_CAN0_CAN0_IO" VALUE="&lt;Select>"/>
         <PARAMETER NAME="PCW_CAN0_GRP_CLK_ENABLE" VALUE="0"/>
@@ -5027,6 +5059,20 @@
         <PORT DIR="I" NAME="I2C0_SCL_I" SIGIS="undef"/>
         <PORT DIR="O" NAME="I2C0_SCL_O" SIGIS="undef"/>
         <PORT DIR="O" NAME="I2C0_SCL_T" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SPI1_SCLK_I" SIGIS="undef"/>
+        <PORT DIR="O" NAME="SPI1_SCLK_O" SIGIS="undef"/>
+        <PORT DIR="O" NAME="SPI1_SCLK_T" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SPI1_MOSI_I" SIGIS="undef"/>
+        <PORT DIR="O" NAME="SPI1_MOSI_O" SIGIS="undef"/>
+        <PORT DIR="O" NAME="SPI1_MOSI_T" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SPI1_MISO_I" SIGIS="undef"/>
+        <PORT DIR="O" NAME="SPI1_MISO_O" SIGIS="undef"/>
+        <PORT DIR="O" NAME="SPI1_MISO_T" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SPI1_SS_I" SIGIS="undef"/>
+        <PORT DIR="O" NAME="SPI1_SS_O" SIGIS="undef"/>
+        <PORT DIR="O" NAME="SPI1_SS1_O" SIGIS="undef"/>
+        <PORT DIR="O" NAME="SPI1_SS2_O" SIGIS="undef"/>
+        <PORT DIR="O" NAME="SPI1_SS_T" SIGIS="undef"/>
         <PORT DIR="O" NAME="M_AXI_GP0_ARVALID" SIGIS="undef" SIGNAME="cpu_0_M_AXI_GP0_ARVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_AXI_arvalid"/>
@@ -5239,6 +5285,8 @@
             <CONNECTION INSTANCE="axi_quad_spi_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_quad_spi_1" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="AXI_PWM_0" PORT="s00_axi_aclk"/>
+            <CONNECTION INSTANCE="AXI_PWM_1" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_ACLK"/>
@@ -5249,8 +5297,6 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M05_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M06_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M07_ACLK"/>
-            <CONNECTION INSTANCE="AXI_PWM_0" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="AXI_PWM_1" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" SIGIS="rst" SIGNAME="cpu_0_FCLK_RESET0_N">
@@ -5331,6 +5377,24 @@
             <PORTMAP PHYSICAL="I2C0_SCL_I"/>
             <PORTMAP PHYSICAL="I2C0_SCL_O"/>
             <PORTMAP PHYSICAL="I2C0_SCL_T"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="cpu_0_SPI_1" NAME="SPI_1" TYPE="INITIATOR">
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="SPI1_SCLK_I"/>
+            <PORTMAP PHYSICAL="SPI1_SCLK_O"/>
+            <PORTMAP PHYSICAL="SPI1_SCLK_T"/>
+            <PORTMAP PHYSICAL="SPI1_MOSI_I"/>
+            <PORTMAP PHYSICAL="SPI1_MOSI_O"/>
+            <PORTMAP PHYSICAL="SPI1_MOSI_T"/>
+            <PORTMAP PHYSICAL="SPI1_MISO_I"/>
+            <PORTMAP PHYSICAL="SPI1_MISO_O"/>
+            <PORTMAP PHYSICAL="SPI1_MISO_T"/>
+            <PORTMAP PHYSICAL="SPI1_SS_I"/>
+            <PORTMAP PHYSICAL="SPI1_SS_O"/>
+            <PORTMAP PHYSICAL="SPI1_SS1_O"/>
+            <PORTMAP PHYSICAL="SPI1_SS2_O"/>
+            <PORTMAP PHYSICAL="SPI1_SS_T"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="cpu_0_M_AXI_GP0" DATAWIDTH="32" NAME="M_AXI_GP0" TYPE="MASTER">
@@ -5871,6 +5935,26 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="M05_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_interconnect_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="interconnect_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_ACLK" SIGIS="clk" SIGNAME="cpu_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cpu_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M06_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_interconnect_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="interconnect_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M07_ACLK" SIGIS="clk" SIGNAME="cpu_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cpu_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M07_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_interconnect_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
@@ -6573,26 +6657,6 @@
         <PORT DIR="O" NAME="M05_AXI_wvalid" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M06_ACLK" SIGIS="clk" SIGNAME="cpu_0_FCLK_CLK0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="cpu_0" PORT="FCLK_CLK0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M06_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_interconnect_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="interconnect_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M07_ACLK" SIGIS="clk" SIGNAME="cpu_0_FCLK_CLK0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="cpu_0" PORT="FCLK_CLK0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M07_ARESETN" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_interconnect_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="M06_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="AXI_PWM_0_s00_axi_awaddr">

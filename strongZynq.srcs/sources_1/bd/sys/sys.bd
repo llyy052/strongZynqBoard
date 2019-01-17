@@ -168,6 +168,12 @@
         <spirit:busType spirit:library="interface" spirit:name="gpio" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:abstractionType spirit:library="interface" spirit:name="gpio_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
       </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>SPI1</spirit:name>
+        <spirit:master/>
+        <spirit:busType spirit:library="interface" spirit:name="spi" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="spi_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+      </spirit:busInterface>
     </spirit:busInterfaces>
     <spirit:model>
       <spirit:views>
@@ -219,6 +225,8 @@
           <spirit:configurableElementValue spirit:referenceId="PCW_UART0_PERIPHERAL_ENABLE">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_UART0_UART0_IO">MIO 14 .. 15</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_UART1_PERIPHERAL_ENABLE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PCW_SPI0_PERIPHERAL_ENABLE">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PCW_SPI1_PERIPHERAL_ENABLE">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_USB0_PERIPHERAL_ENABLE">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_I2C0_PERIPHERAL_ENABLE">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_I2C0_I2C0_IO">EMIO</spirit:configurableElementValue>
@@ -377,6 +385,8 @@
         <spirit:internalPortReference spirit:componentRef="axi_quad_spi_0" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_quad_spi_1" spirit:portRef="s_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="axi_gpio_0" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="AXI_PWM_0" spirit:portRef="s00_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="AXI_PWM_1" spirit:portRef="s00_axi_aclk"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M00_ACLK"/>
@@ -387,8 +397,6 @@
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M05_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M06_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M07_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="AXI_PWM_0" spirit:portRef="s00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="AXI_PWM_1" spirit:portRef="s00_axi_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>proc_sys_reset_0_interconnect_aresetn</spirit:name>
@@ -489,6 +497,9 @@
       </spirit:hierConnection>
       <spirit:hierConnection spirit:interfaceRef="AXI_GPIO0/axi_gpio_0_GPIO">
         <spirit:activeInterface spirit:busRef="GPIO" spirit:componentRef="axi_gpio_0"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="SPI1/cpu_0_SPI_1">
+        <spirit:activeInterface spirit:busRef="SPI_1" spirit:componentRef="cpu_0"/>
       </spirit:hierConnection>
     </spirit:hierConnections>
   </spirit:design>

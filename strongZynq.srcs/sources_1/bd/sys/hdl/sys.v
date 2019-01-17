@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-//Date        : Mon Jan 07 23:26:27 2019
+//Date        : Thu Jan 17 10:43:13 2019
 //Host        : SRPC00501 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target sys.bd
 //Design      : sys
@@ -1470,6 +1470,20 @@ module sys
     IIC0_sda_i,
     IIC0_sda_o,
     IIC0_sda_t,
+    SPI1_io0_i,
+    SPI1_io0_o,
+    SPI1_io0_t,
+    SPI1_io1_i,
+    SPI1_io1_o,
+    SPI1_io1_t,
+    SPI1_sck_i,
+    SPI1_sck_o,
+    SPI1_sck_t,
+    SPI1_ss1_o,
+    SPI1_ss2_o,
+    SPI1_ss_i,
+    SPI1_ss_o,
+    SPI1_ss_t,
     pwm0_out,
     pwm1_out);
   output [1:0]AXI_GPIO0_tri_o;
@@ -1542,6 +1556,20 @@ module sys
   input IIC0_sda_i;
   output IIC0_sda_o;
   output IIC0_sda_t;
+  input SPI1_io0_i;
+  output SPI1_io0_o;
+  output SPI1_io0_t;
+  input SPI1_io1_i;
+  output SPI1_io1_o;
+  output SPI1_io1_t;
+  input SPI1_sck_i;
+  output SPI1_sck_o;
+  output SPI1_sck_t;
+  output SPI1_ss1_o;
+  output SPI1_ss2_o;
+  input SPI1_ss_i;
+  output SPI1_ss_o;
+  output SPI1_ss_t;
   output pwm0_out;
   output pwm1_out;
 
@@ -1595,6 +1623,20 @@ module sys
   wire [0:0]axi_quad_spi_1_SPI_0_SS_O;
   wire axi_quad_spi_1_SPI_0_SS_T;
   wire axi_quad_spi_1_ip2intc_irpt;
+  wire cpu_0_SPI_1_IO0_I;
+  wire cpu_0_SPI_1_IO0_O;
+  wire cpu_0_SPI_1_IO0_T;
+  wire cpu_0_SPI_1_IO1_I;
+  wire cpu_0_SPI_1_IO1_O;
+  wire cpu_0_SPI_1_IO1_T;
+  wire cpu_0_SPI_1_SCK_I;
+  wire cpu_0_SPI_1_SCK_O;
+  wire cpu_0_SPI_1_SCK_T;
+  wire cpu_0_SPI_1_SS1_O;
+  wire cpu_0_SPI_1_SS2_O;
+  wire cpu_0_SPI_1_SS_I;
+  wire cpu_0_SPI_1_SS_O;
+  wire cpu_0_SPI_1_SS_T;
   wire [0:0]proc_sys_reset_0_interconnect_aresetn;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
   wire [14:0]processing_system7_0_DDR_ADDR;
@@ -1839,6 +1881,16 @@ module sys
   assign IIC0_scl_t = processing_system7_0_IIC_0_SCL_T;
   assign IIC0_sda_o = processing_system7_0_IIC_0_SDA_O;
   assign IIC0_sda_t = processing_system7_0_IIC_0_SDA_T;
+  assign SPI1_io0_o = cpu_0_SPI_1_IO0_O;
+  assign SPI1_io0_t = cpu_0_SPI_1_IO0_T;
+  assign SPI1_io1_o = cpu_0_SPI_1_IO1_O;
+  assign SPI1_io1_t = cpu_0_SPI_1_IO1_T;
+  assign SPI1_sck_o = cpu_0_SPI_1_SCK_O;
+  assign SPI1_sck_t = cpu_0_SPI_1_SCK_T;
+  assign SPI1_ss1_o = cpu_0_SPI_1_SS1_O;
+  assign SPI1_ss2_o = cpu_0_SPI_1_SS2_O;
+  assign SPI1_ss_o = cpu_0_SPI_1_SS_O;
+  assign SPI1_ss_t = cpu_0_SPI_1_SS_T;
   assign axi_iic_0_IIC_SCL_I = AXI_IIC0_scl_i;
   assign axi_iic_0_IIC_SDA_I = AXI_IIC0_sda_i;
   assign axi_iic_1_IIC_SCL_I = AXI_IIC1_scl_i;
@@ -1853,6 +1905,10 @@ module sys
   assign axi_quad_spi_1_SPI_0_IO1_I = AXI_SPI1_io1_i;
   assign axi_quad_spi_1_SPI_0_SCK_I = AXI_SPI1_sck_i;
   assign axi_quad_spi_1_SPI_0_SS_I = AXI_SPI1_ss_i[0];
+  assign cpu_0_SPI_1_IO0_I = SPI1_io0_i;
+  assign cpu_0_SPI_1_IO1_I = SPI1_io1_i;
+  assign cpu_0_SPI_1_SCK_I = SPI1_sck_i;
+  assign cpu_0_SPI_1_SS_I = SPI1_ss_i;
   assign processing_system7_0_IIC_0_SCL_I = IIC0_scl_i;
   assign processing_system7_0_IIC_0_SDA_I = IIC0_sda_i;
   assign pwm0_out = AXI_PWM_0_pulse_out;
@@ -2142,7 +2198,21 @@ module sys
         .M_AXI_GP0_WVALID(processing_system7_0_M_AXI_GP0_WVALID),
         .PS_CLK(FIXED_IO_ps_clk),
         .PS_PORB(FIXED_IO_ps_porb),
-        .PS_SRSTB(FIXED_IO_ps_srstb));
+        .PS_SRSTB(FIXED_IO_ps_srstb),
+        .SPI1_MISO_I(cpu_0_SPI_1_IO1_I),
+        .SPI1_MISO_O(cpu_0_SPI_1_IO1_O),
+        .SPI1_MISO_T(cpu_0_SPI_1_IO1_T),
+        .SPI1_MOSI_I(cpu_0_SPI_1_IO0_I),
+        .SPI1_MOSI_O(cpu_0_SPI_1_IO0_O),
+        .SPI1_MOSI_T(cpu_0_SPI_1_IO0_T),
+        .SPI1_SCLK_I(cpu_0_SPI_1_SCK_I),
+        .SPI1_SCLK_O(cpu_0_SPI_1_SCK_O),
+        .SPI1_SCLK_T(cpu_0_SPI_1_SCK_T),
+        .SPI1_SS1_O(cpu_0_SPI_1_SS1_O),
+        .SPI1_SS2_O(cpu_0_SPI_1_SS2_O),
+        .SPI1_SS_I(cpu_0_SPI_1_SS_I),
+        .SPI1_SS_O(cpu_0_SPI_1_SS_O),
+        .SPI1_SS_T(cpu_0_SPI_1_SS_T));
   sys_proc_sys_reset_0_0 proc_sys_reset_0
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),

@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
-//Date        : Mon Jan 07 23:26:27 2019
+//Date        : Thu Jan 17 10:43:13 2019
 //Host        : SRPC00501 running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target sys_wrapper.bd
 //Design      : sys_wrapper
@@ -49,7 +49,13 @@ module sys_wrapper
     iic0_scl_io,
     iic0_sda_io,
     pwm0_out,
-    pwm1_out);
+    pwm1_out,
+    spi1_io0_io,
+    spi1_io1_io,
+    spi1_sck_io,
+    spi1_ss1_o,
+    spi1_ss2_o,
+    spi1_ss_io);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -90,6 +96,12 @@ module sys_wrapper
   inout iic0_sda_io;
   output pwm0_out;
   output pwm1_out;
+  inout spi1_io0_io;
+  inout spi1_io1_io;
+  inout spi1_sck_io;
+  output spi1_ss1_o;
+  output spi1_ss2_o;
+  inout spi1_ss_io;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -179,6 +191,24 @@ module sys_wrapper
   wire iic0_sda_t;
   wire pwm0_out;
   wire pwm1_out;
+  wire spi1_io0_i;
+  wire spi1_io0_io;
+  wire spi1_io0_o;
+  wire spi1_io0_t;
+  wire spi1_io1_i;
+  wire spi1_io1_io;
+  wire spi1_io1_o;
+  wire spi1_io1_t;
+  wire spi1_sck_i;
+  wire spi1_sck_io;
+  wire spi1_sck_o;
+  wire spi1_sck_t;
+  wire spi1_ss1_o;
+  wire spi1_ss2_o;
+  wire spi1_ss_i;
+  wire spi1_ss_io;
+  wire spi1_ss_o;
+  wire spi1_ss_t;
 
   IOBUF axi_iic0_scl_iobuf
        (.I(axi_iic0_scl_o),
@@ -260,6 +290,26 @@ module sys_wrapper
         .IO(iic0_sda_io),
         .O(iic0_sda_i),
         .T(iic0_sda_t));
+  IOBUF spi1_io0_iobuf
+       (.I(spi1_io0_o),
+        .IO(spi1_io0_io),
+        .O(spi1_io0_i),
+        .T(spi1_io0_t));
+  IOBUF spi1_io1_iobuf
+       (.I(spi1_io1_o),
+        .IO(spi1_io1_io),
+        .O(spi1_io1_i),
+        .T(spi1_io1_t));
+  IOBUF spi1_sck_iobuf
+       (.I(spi1_sck_o),
+        .IO(spi1_sck_io),
+        .O(spi1_sck_i),
+        .T(spi1_sck_t));
+  IOBUF spi1_ss_iobuf
+       (.I(spi1_ss_o),
+        .IO(spi1_ss_io),
+        .O(spi1_ss_i),
+        .T(spi1_ss_t));
   sys sys_i
        (.AXI_GPIO0_tri_o(axi_gpio0_tri_o),
         .AXI_IIC0_scl_i(axi_iic0_scl_i),
@@ -331,6 +381,20 @@ module sys_wrapper
         .IIC0_sda_i(iic0_sda_i),
         .IIC0_sda_o(iic0_sda_o),
         .IIC0_sda_t(iic0_sda_t),
+        .SPI1_io0_i(spi1_io0_i),
+        .SPI1_io0_o(spi1_io0_o),
+        .SPI1_io0_t(spi1_io0_t),
+        .SPI1_io1_i(spi1_io1_i),
+        .SPI1_io1_o(spi1_io1_o),
+        .SPI1_io1_t(spi1_io1_t),
+        .SPI1_sck_i(spi1_sck_i),
+        .SPI1_sck_o(spi1_sck_o),
+        .SPI1_sck_t(spi1_sck_t),
+        .SPI1_ss1_o(spi1_ss1_o),
+        .SPI1_ss2_o(spi1_ss2_o),
+        .SPI1_ss_i(spi1_ss_i),
+        .SPI1_ss_o(spi1_ss_o),
+        .SPI1_ss_t(spi1_ss_t),
         .pwm0_out(pwm0_out),
         .pwm1_out(pwm1_out));
 endmodule
